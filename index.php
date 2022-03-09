@@ -8,7 +8,7 @@ include 'model.php';
 $db = connect_db("localhost", "krcannouncer", "user", "password");
 
 /* Landing page */
-if (new_route('/krcannouncer/', 'get')) {
+if (new_route('/krcannouncer/krc-omroeper/', 'get')) {
 
     $players = get_players($db);
     $players_select = get_players_select($players);
