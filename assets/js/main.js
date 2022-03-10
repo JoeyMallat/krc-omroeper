@@ -8,7 +8,7 @@ function getlinks(event) {
     var names = document.getElementsByClassName("playerinfo");
 
     Array.from(names).forEach((name) => {
-        let link = "./assets/sounds/" + name.value.replace(" ", "").toLowerCase() + ".mp3";
+        let link = "./assets/sounds/" + name.value.replaceAll(" ", "").toLowerCase() + ".mp3";
         links.push(link);
     });
 
