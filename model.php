@@ -29,7 +29,7 @@ function connect_db($host, $db, $user, $pass){
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ];
     try {
-        $pdo = new PDO($dsn, $user, $pass, $options);
+        $pdo = new PDO("postgres://ynmhcwmwnpgzjf:cfc93e1c78c5cc51b0ccc880c54bb48c23ed666783566428bb538b2f0a620067@ec2-52-49-56-163.eu-west-1.compute.amazonaws.com:5432/detdgbhsj8hsu1");
     } catch (PDOException $e) {
         echo sprintf("Failed to connect. %s",$e->getMessage());
     }
