@@ -116,9 +116,36 @@ function get_players($db){
 function get_players_select($players){
     $html = "";
     foreach ($players as $key => $value){
-        $html .= '<option>'.$value['name'].'</option>';
+        $html .= '<option>'.$value.'</option>';
     }
     return $html;
+}
+
+function get_players_select_no_db(){
+    $players = [
+        0 => "Svenn Hamming",
+        1 => "Anko Baron",
+        2 => "Jeroen Brontsema",
+        3 => "Wout Jensma",
+        4 => "Raymond Kooman",
+        5 => "Jordy Robbe",
+        6 => "Joey Mallat",
+        7 => "Robin Ammeraal",
+        8 => "Mart Hovenkamp",
+        9 => "Louis de Blecourt",
+        10 => "Marlon Moorlag",
+        11 => "Arnold Knot",
+        12 => "Gijs Wassink",
+        13 => "Emiel Hartlief",
+        14 => "Nick Start",
+        15 => "Thom Hovenkamp",
+        16 => "Marcel Pool",
+        17 => "Jasper Fraaij",
+        18 => "Romano Jansen",
+        19 => "Melwin Bakker",
+        20 => "Sander von Hebel"
+    ];
+    return get_players_select($players);
 }
 
 
